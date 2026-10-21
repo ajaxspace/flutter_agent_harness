@@ -29,7 +29,7 @@ try {
   $OutputEncoding = [Text.Encoding]::UTF8
 } catch { }
 
-$Repo = "IstiN/flutter_agent_harness"
+$Repo = "ajaxspace/flutter_agent_harness"
 $BinaryName = "fa"
 
 # ── Output helpers ───────────────────────────────────────────────────────────

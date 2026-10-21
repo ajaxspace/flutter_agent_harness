@@ -26,7 +26,7 @@
 
 set -eu  # no pipefail: dash (Ubuntu sh) lacks it
 
-REPO="IstiN/flutter_agent_harness"
+REPO="ajaxspace/flutter_agent_harness"
 BINARY="fa"
 
 # ── Output helpers ───────────────────────────────────────────────────────────
@@ -441,7 +441,7 @@ say "    fa \"summarize CHANGELOG.md\""
 say ""
 say "  (the legacy command 'fah' also works)"
 say ""
-say "  Docs:    https://github.com/IstiN/flutter_agent_harness"
+say "  Docs:    https://github.com/ajaxspace/flutter_agent_harness"
 say "  Package: https://pub.dev/packages/flutter_agent_harness"
 say ""
 

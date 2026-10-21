@@ -27,7 +27,7 @@ jobs:
     # (GH_TOKEN falls back to github.token inside) — unlike
     # teammate/sm/merge, whose factories DECLARE SOURCE_GITHUB_TOKEN
     # required and reject inherit at call time.
-    uses: IstiN/dmtools-agentic-workflows/.github/workflows/factory-merge-trigger.yml@main
+    uses: ajaxspace/dmtools-agentic-workflows/.github/workflows/factory-merge-trigger.yml@main
     with:
       runner: ubuntu-latest
       remove_pr_label: false

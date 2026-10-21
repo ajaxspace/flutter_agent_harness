@@ -23,7 +23,7 @@
 
 set -eu  # no pipefail: dash (Ubuntu sh) lacks it
 
-REPO="IstiN/flutter_agent_harness"
+REPO="ajaxspace/flutter_agent_harness"
 BINARY="fa"
 
 # ── Output helpers ───────────────────────────────────────────────────────────

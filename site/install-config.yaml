@@ -73,6 +73,6 @@ install:
     - ANTHROPIC_API_KEY
     - GOOGLE_API_KEY
     - OPENAI_API_KEY
-  docs_url: "https://github.com/IstiN/flutter_agent_harness"
+  docs_url: "https://github.com/ajaxspace/flutter_agent_harness"
   package_url: "https://pub.dev/packages/flutter_agent_harness"
   example_task: "summarize CHANGELOG.md"

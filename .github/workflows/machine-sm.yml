@@ -61,7 +61,7 @@ jobs:
     # resolves from releases via vars — no factory_ref here. Flip in
     # lockstep with the other machine-loop stubs — guarded by
     # test/machine_kit/factory_stub_ref_test.dart.
-    uses: IstiN/dmtools-agentic-workflows/.github/workflows/factory-sm.yml@main
+    uses: ajaxspace/dmtools-agentic-workflows/.github/workflows/factory-sm.yml@main
     with:
       # Manual ticks default to dry; cron ticks run live.
       dryRun: ${{ github.event.inputs.dryRun || 'false' }}

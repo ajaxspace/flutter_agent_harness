@@ -522,7 +522,7 @@ jobs:
   # ─────────────────────────────────────────────────────────────────────────
   cube-kernel-live:
     name: Cube kernel live (macOS)
-    runs-on: [self-hosted, macos-m5]
+    runs-on: macos-latest
     needs: [release-pending, release-dedupe, changes]
     if: needs.changes.outputs.core == 'true' && needs.release-pending.outputs.pending == 'true' && needs.release-dedupe.outputs.dedupe != 'true'
     timeout-minutes: 10
