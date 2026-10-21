@@ -2541,9 +2541,10 @@ gh release create "v9.9.9" \
       // The reserved runner's only PR-time consumer stays the macOS kernel E2E.
       expect(
         (ci['cube-kernel-live'] as YamlMap)['runs-on'].toString(),
-        contains('macos-m5'),
+        contains('macos-latest'),
         reason:
-            'cube-kernel-live keeps the genuinely macOS-only gate on fa-m5-1',
+            'cube-kernel-live runs the macOS-only gate on a hosted runner '
+            '(the fork has no fa-m5-1 pool)',
       );
     });
 
