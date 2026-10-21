@@ -3728,7 +3728,8 @@ jobs:
     #    never hold a Dart package hostage (v1.0.520's push twin: publish
     #    skipped off a red pty-integration shard). The Provider smoke stays a
     #    hard gate (#551): needs.integration.result == 'success'.
-    if: >-
+    if: github.repository == 'IstiN/flutter_agent_harness' &&
+      >-
       !cancelled() && needs.quality-gate.outputs.dart_ok == 'true' &&
       needs.integration.result == 'success' &&
       github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')

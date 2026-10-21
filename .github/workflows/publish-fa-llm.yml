@@ -15,6 +15,8 @@ permissions:
 
 jobs:
   publish:
+    # Fork guard: pub.dev publishing belongs to the upstream home only.
+    if: github.repository == 'IstiN/flutter_agent_harness'
     runs-on: ubuntu-latest
     defaults:
       run:
