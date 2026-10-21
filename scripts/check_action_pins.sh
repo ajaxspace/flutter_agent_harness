@@ -9,7 +9,7 @@
 # Exempt:
 #   - ./...                                 first-party repo-relative actions/workflows
 #   - @<40-hex>                             full commit SHA (the default third-party form)
-#   - IstiN/dmtools-agentic-workflows/*@main  owner directive 2026-10-04: awf tracks
+#   - ajaxspace/dmtools-agentic-workflows/*@main  owner directive 2026-10-04: awf tracks
 #     @main (always-latest, review-gated) — scoped EXACTLY to this repo at
 #     exactly main; enforced per-stub by
 #     test/machine_kit/factory_stub_ref_test.dart (every awf uses: resolves
@@ -74,7 +74,7 @@ for file in "${files[@]}"; do
         # length glob — require hex digits (a commit SHA), nothing else.
         if [[ "$sha" =~ ^[0-9a-fA-F]{40}$ ]]; then
           : # full 40-hex commit SHA — the default accepted third-party form
-        elif [[ "$ref" == IstiN/dmtools-agentic-workflows/*@main ]]; then
+        elif [[ "$ref" == ajaxspace/dmtools-agentic-workflows/*@main ]]; then
           : # owner directive 2026-10-04: awf tracks @main (always-latest,
             # review-gated). Scoped exactly: THIS repo at exactly main —
             # test/machine_kit/factory_stub_ref_test.dart pins the policy

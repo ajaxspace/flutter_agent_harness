@@ -22,7 +22,7 @@
 #   PIN_RELEASE_BASE     file:// dir acting as the release root — fixture
 #                        mode: the marker becomes $base/vpinned/PINNED_VERSION
 #                        and no gh/network is touched (selftest/dry runs)
-#   PIN_RELEASE_REPO     owner/repo for gh calls (default: IstiN/flutter_agent_harness)
+#   PIN_RELEASE_REPO     owner/repo for gh calls (default: ajaxspace/flutter_agent_harness)
 #   MARKER_TAG           marker release/tag name (default: vpinned)
 # POSIX-only below: Ubuntu's /bin/sh is dash — no pipefail, no arrays/[[]].
 # Enable pipefail only where the shell supports it (same convention as
@@ -31,7 +31,7 @@ set -eu
 ( set -o pipefail ) 2>/dev/null && set -o pipefail || true
 
 MARKER="${MARKER_TAG:-vpinned}"
-REPO="${PIN_RELEASE_REPO:-IstiN/flutter_agent_harness}"
+REPO="${PIN_RELEASE_REPO:-ajaxspace/flutter_agent_harness}"
 BASE="${PIN_RELEASE_BASE:-https://github.com/$REPO/releases/download}"
 
 # ── is-newer <a> <b>: numeric semver compare, v-prefix tolerated ────────────

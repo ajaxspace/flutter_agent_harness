@@ -25,7 +25,7 @@ import 'package:pointycastle/export.dart'
         RSASignature,
         SHA256Digest;
 
-const _repo = 'IstiN/flutter_agent_harness';
+const _repo = 'ajaxspace/flutter_agent_harness';
 
 /// Network bounds for the self-update paths: metadata answers (latest
 /// tag, manifest, signature) within [kFaUpdateNetworkTimeout]; the

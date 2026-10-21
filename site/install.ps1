@@ -32,7 +32,7 @@ try {
   $OutputEncoding = [Text.Encoding]::UTF8
 } catch { }
 
-$Repo = "IstiN/flutter_agent_harness"
+$Repo = "ajaxspace/flutter_agent_harness"
 $BinaryName = "fa"
 
 # ── Output helpers ───────────────────────────────────────────────────────────
@@ -184,7 +184,7 @@ Write-Host "    fa `"summarize CHANGELOG.md`""
 Write-Host ""
 Write-Host "  (the legacy command 'fah' also works)"
 Write-Host ""
-Write-Host "  Docs:    https://github.com/IstiN/flutter_agent_harness"
+Write-Host "  Docs:    https://github.com/ajaxspace/flutter_agent_harness"
 Write-Host "  Package: https://pub.dev/packages/flutter_agent_harness"
 Write-Host ""
 

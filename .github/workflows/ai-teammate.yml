@@ -169,7 +169,7 @@ jobs:
     # main head at run start. The ENGINE (dmtools-agents) stays pinned
     # machine-loop stubs — guarded by
     # test/machine_kit/factory_stub_ref_test.dart.
-    uses: IstiN/dmtools-agentic-workflows/.github/workflows/factory-teammate.yml@main
+    uses: ajaxspace/dmtools-agentic-workflows/.github/workflows/factory-teammate.yml@main
     with:
       # The literal uses-ref: the factory requires it (it cannot derive its
       # own ref — github.workflow_ref in a called workflow is the CALLER's).

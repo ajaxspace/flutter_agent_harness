@@ -49,7 +49,7 @@ jobs:
     # CODE-BEARING — the next real commit re-enables the healthy
     # code-bearing-head skip. Diagnosed 2026-10-04 on run 37193754301
     # (head 1fe9b1232, a zero-diff sync merge).
-    uses: IstiN/dmtools-agentic-workflows/.github/workflows/factory-sm-kicker.yml@main
+    uses: ajaxspace/dmtools-agentic-workflows/.github/workflows/factory-sm-kicker.yml@main
     with:
       sm_workflow: machine-sm.yml
       ci_workflow: ci.yml

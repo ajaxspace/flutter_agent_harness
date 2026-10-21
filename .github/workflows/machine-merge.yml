@@ -46,7 +46,7 @@ jobs:
           contains(github.event.label.name, 'pr_approved')
         )
       )
-    uses: IstiN/dmtools-agentic-workflows/.github/workflows/factory-merge.yml@main
+    uses: ajaxspace/dmtools-agentic-workflows/.github/workflows/factory-merge.yml@main
     with:
       ci_workflow: ci.yml
     secrets:

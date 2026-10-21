@@ -522,7 +522,7 @@ jobs:
   # ─────────────────────────────────────────────────────────────────────────
   cube-kernel-live:
     name: Cube kernel live (macOS)
-    runs-on: [self-hosted, macos-m5]
+    runs-on: macos-latest
     needs: [release-pending, release-dedupe, changes]
     if: needs.changes.outputs.core == 'true' && needs.release-pending.outputs.pending == 'true' && needs.release-dedupe.outputs.dedupe != 'true'
     timeout-minutes: 10
@@ -3100,7 +3100,7 @@ jobs:
           mkdir -p "$tmp/bad" "$tmp/bad-hex" "$tmp/bad-composite/.github/actions/probe/deep" "$tmp/bad-awf-ref" "$tmp/bad-other-main" "$tmp/good" "$tmp/good-awf-main" "$tmp/good-composite/.github/actions/probe/deep" "$tmp/string-safe"
           printf 'jobs:\n  probe:\n    steps:\n      - uses: actions/checkout@v4\n' > "$tmp/bad/bad.yml"
           printf 'jobs:\n  probe:\n    steps:\n      - uses: actions/checkout@gggggggggggggggggggggggggggggggggggggggg\n' > "$tmp/bad-hex/bad.yml"
-          printf 'jobs:\n  probe:\n    steps:\n      - uses: IstiN/dmtools-agentic-workflows/.github/workflows/factory-sm.yml@master\n' > "$tmp/bad-awf-ref/wf.yml"
+          printf 'jobs:\n  probe:\n    steps:\n      - uses: ajaxspace/dmtools-agentic-workflows/.github/workflows/factory-sm.yml@master\n' > "$tmp/bad-awf-ref/wf.yml"
           printf 'jobs:\n  probe:\n    steps:\n      - uses: actions/checkout@main\n' > "$tmp/bad-other-main/wf.yml"
           printf 'name: probe\nruns:\n  using: composite\n  steps:\n    - uses: actions/checkout@v4\n' > "$tmp/bad-composite/.github/actions/probe/deep/action.yaml"
           printf 'jobs:\n  probe:\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4\n' > "$tmp/good/good.yml"
@@ -3109,7 +3109,7 @@ jobs:
           # test/machine_kit/factory_stub_ref_test.dart). Every other
           # mutable ref — awf at a non-main ref, another repo at main —
           # stays a violation (fixtures above).
-          printf 'jobs:\n  probe:\n    uses: IstiN/dmtools-agentic-workflows/.github/workflows/factory-sm.yml@main\n' > "$tmp/good-awf-main/wf.yml"
+          printf 'jobs:\n  probe:\n    uses: ajaxspace/dmtools-agentic-workflows/.github/workflows/factory-sm.yml@main\n' > "$tmp/good-awf-main/wf.yml"
           printf 'name: probe\nruns:\n  using: composite\n  steps:\n    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4\n' > "$tmp/good-composite/.github/actions/probe/deep/action.yaml"
           # String-safety: a uses-shaped string INSIDE a run: scalar is not a
           # step ref — the checker is line-anchored (^[[:space:]]*(- )?uses:)
@@ -3729,6 +3729,7 @@ jobs:
     #    skipped off a red pty-integration shard). The Provider smoke stays a
     #    hard gate (#551): needs.integration.result == 'success'.
     if: >-
+      github.repository == 'IstiN/flutter_agent_harness' &&
       !cancelled() && needs.quality-gate.outputs.dart_ok == 'true' &&
       needs.integration.result == 'success' &&
       github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
