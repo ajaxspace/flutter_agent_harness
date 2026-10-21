@@ -68,7 +68,7 @@ void main() {
       }
       final kicker = File('.github/workflows/sm-kicker.yml').readAsStringSync();
       final delegates = kicker.contains(
-        'uses: IstiN/dmtools-agentic-workflows/.github/workflows/factory-sm-kicker.yml@',
+        'uses: ajaxspace/dmtools-agentic-workflows/.github/workflows/factory-sm-kicker.yml@',
       );
       expect(
         dispatchSites >= 1 || delegates,
@@ -87,7 +87,7 @@ void main() {
       expect(
         kicker,
         contains(
-          'uses: IstiN/dmtools-agentic-workflows/.github/workflows/factory-sm-kicker.yml@',
+          'uses: ajaxspace/dmtools-agentic-workflows/.github/workflows/factory-sm-kicker.yml@',
         ),
         reason:
             'the rescue dispatch now lives in the factory pack '
